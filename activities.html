@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activities - Anis Shamsuri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(-45deg, #fdf6f0, #ffe7de, #fbe2d4, #fdf6f0);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #3b3b3b;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      color: #e29578;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-left: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #6e6e6e;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e29578;
+    }
+
+    .toggle-btn {
+      background-color: #e29578;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #d37b61;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 60px;
+      padding: 20px;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #403c3c;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .activity-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .activity-card img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .activity-info {
+      flex: 1;
+    }
+
+    .activity-info h2 {
+      font-size: 22px;
+      color: #403c3c;
+      margin-bottom: 10px;
+    }
+
+    .activity-info p {
+      font-size: 16px;
+      color: #5a5a5a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #a2a2a2;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    /* Dark Mode Styles */
+    .dark-mode {
+      background: #1e1e1e;
+      color: #f0eae5;
+    }
+
+    .dark-mode header,
+    .dark-mode footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+    }
+
+    .dark-mode .nav-links a {
+      color: #ccc;
+    }
+
+    .dark-mode .nav-links a:hover {
+      color: #e29578;
+    }
+
+    .dark-mode .activity-card {
+      background-color: #2e2e2e;
+    }
+
+    .dark-mode .activity-info h2,
+    .dark-mode .activity-info p {
+      color: #f0eae5;
+    }
+
+    .dark-mode .activity-card img {
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ANIS SHAMSURI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="activities.html">Activities & Experience</a></li>
+      <li><a href="experience.html">Project</a></li>
+     
+    </ul>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <h1>Activities</h1>
+
+    <div class="activity-card">
+      <img src="splash.jpg" alt="Coding Competition">
+      <div class="activity-info">
+        <h2>Aljazari Splash Run 2025</h2>
+        <span>UTeM</span>
+        <p>Joined the run around campus with some friends.</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="tvet.jpg" alt="Web Development Bootcamp">
+      <div class="activity-info">
+        <h2>Hari TVET Negara 2025</h2>
+        <span>UTeM</span>
+        <p>Attended TVET day and visited the booths.</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="galau.png" alt="Web Development Bootcamp">
+      <div class="activity-info">
+        <h2>Malam Galau 2025</h2>
+        <span>UTeM</span>
+        <p>Attended malam galau with friends.</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="jamboree.jpg" alt="ICT Day Event">
+      <div class="activity-info">
+        <h2>Jamboree 2024</h2>
+        <span>KMPh</span>
+        <p>Representing KMPH in a Jamboree 2024</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="frisbee.jpg" alt="Web Development Bootcamp">
+      <div class="activity-info">
+        <h2>Frisbee Competition 2024</h2>
+         <span>KMPh</span>
+      <p>Organizing a Frisbee Competition at the Matriculation Level</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="sukan.jpg" alt="ICT Day Event">
+      <div class="activity-info">
+        <h2>Sport day IIUM & KMPh 2023</h2>
+        <p>Joined the run competition with  friends.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+<div class="container">
+    <h1>Experiences</h1>
+
+    <div class="activity-card">
+      <img src="debat.jpg" alt="debat Competition">
+      <div class="activity-info">
+        <h2>Coach for Debaters (freelance)</h2>
+         <ul>
+        <li>Run workshops or group training sessions.</li>
+        <li>Help institutions or schools set up or improve their debate clubs.</li>
+        <li>Offer feedback on speeches, debates, and practice rounds</li>
+        <li>Teach debate fundamentals including case construction, rebuttal strategies, and logical argumentation.</li>
+    </ul>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-info">
+        <h2>MamaKim Wellness (fastgig)</h2>
+        <ul>
+        <li>Assisting in food preparation and serving</li>
+        <li>Handling customer orders and payments</li>
+        <li>Ensuring cleanliness and hygiene in the working area</li>
+        <li>Coordinating with team members to ensure smooth operations</li>
+    </ul>
+
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-info">
+        <h2>BoatNoodles (fastgig)</h2>
+        <ul>
+        <li>Welcome customers with a warm and friendly attitude</li>
+        <li>Assign guests to tables based on availability and group size</li>
+        <li>Maintain and manage waitlists during busy periods</li>
+        <li>Communicate with waiters and kitchen staff to manage flow and avoid overcrowding</li>
+    </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Anis Shamsuri. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.container').style.animation = 'fadeInUp 1.2s ease forwards';
+    });
+  </script>
+</body>
+</html>
